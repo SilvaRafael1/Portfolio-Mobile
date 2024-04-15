@@ -1,20 +1,20 @@
-import { SafeAreaView, ScrollView, Text, View, Image } from "react-native"
-import TecnologiasHook from "../../hooks/TecnologiasHook"
-import styles from "./styles"
+import { ScrollView, Text, View, Image } from "react-native";
+import TecnologiasHook from "../../hooks/TecnologiasHook";
+import styles from "./styles";
 
 const Tec = ({ id, title, source }) => (
   <View key={id} style={styles.tecnologias}>
     <Text>{source}</Text>
     <Text>{title}</Text>
   </View>
-)
+);
 
 export default function Habilidades() {
-  const { tecnologias } = TecnologiasHook()
+  const { tecnologias } = TecnologiasHook();
 
   return (
-    <SafeAreaView>
-      <ScrollView>
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.vGeral}>
         <View>
           <Text>Experiência</Text>
           <Text>
@@ -28,13 +28,13 @@ export default function Habilidades() {
             Maio de 2023 - Outubro de 2023
           </Text>
         </View>
-          <Text>Tecnologias</Text>
+        <Text>Tecnologias</Text>
         <View>
-          {
-            tecnologias.map((tec) => <Tec key={tec.id} title={tec.title} source={tec.source} />)
-          }
+          {tecnologias.map((tec) => (
+            <Tec key={tec.id} title={tec.title} source={tec.source} />
+          ))}
         </View>
-      </ScrollView>
-    </SafeAreaView>
-  )
+      </View>
+    </ScrollView>
+  );
 }

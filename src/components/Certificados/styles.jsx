@@ -14,4 +14,20 @@ export default StyleSheet.create({
     borderRadius: 15,
     padding: 10,
   },
+  certificados: {
+    fontWeight: "bold",
+    fontSize: 21
+  },
+  
+  addCertificado: {
+    fontWeight: "bold",
+    marginTop: 12,
+    fontSize: 18
+  },
+
+  input: {
+    borderWidth: 1,
+    borderColor: "#fff",
+    borderBottomColor: "#000000",
+  }
 })
