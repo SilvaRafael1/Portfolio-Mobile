@@ -10,8 +10,30 @@ export default StyleSheet.create({
   vGeral: {
     backgroundColor: "white",
     width: 380,
+    height: 490,
     marginTop: 15,
     borderRadius: 15,
     padding: 10,
   },
+
+  experiencia: {
+    fontWeight: "bold",
+    fontSize: 21
+  },
+
+  image: {
+    height: 50,
+    width: 50
+  },
+
+  vTecnologias: {
+    flex: 1,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    padding: 3
+  },
+
+  tecnologias: {
+    width: '50%',
+  }
 })

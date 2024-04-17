@@ -1,4 +1,5 @@
 import { ScrollView, Text, View, Image } from "react-native";
+import { Feather } from "@expo/vector-icons";
 import TecnologiasHook from "../../hooks/TecnologiasHook";
 import styles from "./styles";
 
@@ -16,20 +17,25 @@ export default function Habilidades() {
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.vGeral}>
         <View>
-          <Text>Experiência</Text>
+          <Text style={styles.experiencia}>
+            <Feather name="arrow-down-right" size={21} color="black" />Experiência
+          </Text>
           <Text>
             Hospital Tacchini {"\n"}
             Assistente de Suporte de TI{"\n"}
             Março de 2022 - Presente
           </Text>
+          <Text>--</Text>
           <Text>
             Compass UOL{"\n"}
             Estágio de Desenvolvimento{"\n"}
-            Maio de 2023 - Outubro de 2023
+            Maio de 2023 - Outubro de 2023{"\n"}
           </Text>
         </View>
-        <Text>Tecnologias</Text>
-        <View>
+        <Text style={styles.experiencia}>
+          <Feather name="arrow-down-right" size={21} color="black" />Tecnologias
+        </Text>
+        <View style={styles.vTecnologias}>
           {tecnologias.map((tec) => (
             <Tec key={tec.id} title={tec.title} source={tec.source} />
           ))}
